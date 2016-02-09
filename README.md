@@ -1,7 +1,20 @@
-# frontend
-- coding best practices
-	- HTML 
-	- CSS/SASS
-	- Javascript/jQuery
-- preferred CMS(s)
-- preferred grid systems/frameworks
+#Front-End Guidelines
+- [Boilerplate](http://comrade.github.io/frontend/#starting)
+ - [Doctype](http://comrade.github.io/frontend/#starting)
+ - [Character Encoding](http://comrade.github.io/frontend/#starting)
+ - [Metadata](http://comrade.github.io/frontend/#starting)
+- [Directory Structure](http://comrade.github.io/frontend/#directory)
+- [Layout](http://comrade.github.io/frontend/#layout)
+- [Mobile Optimization](http://comrade.github.io/frontend/#mobile)
+- [Coding Style](http://comrade.github.io/frontend/#coding)
+ - [HTML](http://comrade.github.io/frontend/#html)
+ - [CSS](http://comrade.github.io/frontend/#css)
+ - [Javascript](http://comrade.github.io/frontend/#javascript)
+- [Browser Support](http://comrade.github.io/frontend/#browser)
+ - [QA](http://comrade.github.io/frontend/#qa)
+- [Accessibility](http://comrade.github.io/frontend/#accessibility)
+ - [Forms](http://comrade.github.io/frontend/#accessibility)
+ - [Tables](http://comrade.github.io/frontend/#accessibility)
+- [Typography](http://comrade.github.io/frontend/#typography)
+- [Icons](http://comrade.github.io/frontend/#icons)
+- [Validation](http://comrade.github.io/frontend/#validation)
