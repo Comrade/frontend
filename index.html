@@ -2,351 +2,407 @@
 <html class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="author" content="melissa">
-    <meta name="description" content="Comrade Front End Guidelines">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Comrade Front End Guidelines</title>
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/favicon.ico">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/comrade-highlight.css">
-    <script src="js/vendor/modernizr.js"></script>
-    <script src="js/vendor/highlight.pack.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="author" content="melissa">
+	<meta name="description" content="Comrade Front End Guidelines">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Comrade Front End Guidelines</title>
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="icon" href="/favicon.ico">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/comrade-highlight.css">
+	<script src="js/vendor/modernizr.js"></script>
+	<script src="js/vendor/highlight.pack.js"></script>
 </head>
+
 <body>
-        <!--[if lt IE 10]>
+	<!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <main class="container">
-            <nav class="sidebar">
-                <a class="logo" href="https://github.com/Comrade"><img src="images/comrade_logo.png" alt="comrade github"></a>
-                <ul class="plain">
-                    <li><a href="#starting">Boilerplate</a>
-                        <ul>
-                            <li><a href="#starting">Doctype</a></li>
-                            <li><a href="#starting">Character Encoding</a></li>
-                            <li><a href="#starting">Metadata</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#directory">Directory Structure</a></li>
-<!--                    <li><a href="#setup">Project Setup</a></li>-->
-                    <li><a href="#layout">Layout</a></li>
-                    <li><a href="#mobile">Mobile Optimization</a></li>
-                    <li><a href="#coding">Coding Style</a>
-                        <ul>
-                            <li><a href="#html">HTML</a></li>
-                            <li><a href="#css">CSS</a></li>
-                            <li><a href="#javascript">Javascript</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#browser">Browser Support</a>
-                        <ul>
-                            <li><a href="#browser">QA</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#accessibility">Accessibility</a>
-                        <ul>
-                            <li><a href="#accessibility">Forms</a></li>
-                            <li><a href="#accessibility">Tables</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#typography">Typography</a></li>
-                    <li><a href="#icons">Icons</a></li>
-                    <li><a href="#validation">Validation</a></li>
-                </ul>
-            </nav>
-            <div class="content">
-                <section id="starting">
-                    <h1>Starting Points</h1>
-                    <p>We use <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a> to get started when we need a simple blank slate.</p>
-                    <p>Doctype</p><pre><code>&lt;!doctype html&gt;</code></pre>
-                    <p>Character Encoding</p><pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
-                    <p>Metadata content</p>
-                    <ul>
-                        <li>Page Titles</li>
-                        <li>Meta Description</li>
-                    </ul>
-                </section>
-                <section id="directory">
-                    <h1>Directory Structure</h1><pre><code class="html">/css<br>    main.css<br>    print.css (not always necessary)<br>/images<br>    image-used-in-non-specific-place.jpg<br>    /heroes<br>        homepage-hero.v1.jpg<br>    /sprites<br>        sprite.png<br>/js<br>    main.js<br>    /vendor<br>        jquery-1.9.1.min.js</code></pre></section>
-<!--				<section id="setup">-->
-					<!-- TODO: Add project setup section -->
-					<!-- create repo with grunt/bower install? -->
-<!--				</section>-->
-                <section id="layout">
-                    <h1>Layout</h1>
-					<p>Most recently we've been using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> for a starting point for projects.</p>
-                    <ul>
-                        <li>Avoid heavy nesting of columns</li>
-                        <li>Structure</li>
-                        <li>Navigation</li>
-                    </ul>
-                </section>
-                <section id="mobile">
-                    <h1>Mobile Optimization</h1><pre><code>&lt;meta name="viewport" content="width=device-width"&gt;</code></pre>
-                    <ul>
-                        <li>Media Queries (try to limit number of breakpoints)</li>
-                        <li>Images, lazy loading</li>
-                        <li>Minification</li>
-                        <li>Limit server calls</li>
-                    </ul>
-                </section>
-                <section id="coding">
-                    <h1>Coding Style</h1>
-                    <p>Indent using a tab representing 4 spaces for HTML, CSS and Javascript</p>
-                    <h2 id="html">HTML</h2><pre><code>&lt;!—  Add breaks for readability when necessary —&gt;
+	<main class="container">
+		<nav class="sidebar">
+			<a class="logo" href="https://github.com/Comrade"><img src="images/comrade_logo.png" alt="comrade github"></a>
+			<ul class="plain">
+				<li><a href="#starting">Boilerplate</a>
+					<ul>
+						<li><a href="#starting">Doctype</a></li>
+						<li><a href="#starting">Character Encoding</a></li>
+						<li><a href="#starting">Metadata</a></li>
+					</ul>
+				</li>
+				<li><a href="#directory">Directory Structure</a></li>
+				<!--                    <li><a href="#setup">Project Setup</a></li>-->
+				<li><a href="#layout">Layout</a></li>
+				<li><a href="#mobile">Mobile Optimization</a></li>
+				<li><a href="#coding">Coding Style</a>
+					<ul>
+						<li><a href="#html">HTML</a></li>
+						<li><a href="#css">CSS</a></li>
+						<li><a href="#javascript">Javascript</a></li>
+					</ul>
+				</li>
+				<li><a href="#browser">Browser Support</a>
+					<ul>
+						<li><a href="#browser">QA</a></li>
+					</ul>
+				</li>
+				<li><a href="#accessibility">Accessibility</a>
+					<ul>
+						<li><a href="#accessibility">Forms</a></li>
+						<li><a href="#accessibility">Tables</a></li>
+					</ul>
+				</li>
+				<li><a href="#typography">Typography</a></li>
+				<li><a href="#icons">Icons</a></li>
+				<li><a href="#validation">Validation</a></li>
+			</ul>
+		</nav>
+		<div class="content">
+			<section id="starting">
+				<h1>Starting Points</h1>
+				<p>We use <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a> to get started when we need a simple blank slate.</p>
+				<p>Doctype</p>
+				<pre><code>&lt;!doctype html&gt;</code></pre>
+				<p>Character Encoding</p>
+				<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+				<p>Metadata content</p>
+				<ul>
+					<li>Page Titles</li>
+					<li>Meta Description</li>
+					<li>Viewport (for mobile optimization)</li>
+				</ul>
+				<h2>Example</h2>
+				<pre><code>
+&lt;title&gt;Strategy and Design | Comrade&lt;/title&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;meta name="description" content="We work with leaders in financial services, healthcare and technology to design web and mobile products people love to use."&gt;
+				</code></pre>
+			</section>
+			<section id="directory">
+				<h1>Directory Structure</h1><pre><code class="html">/css<br>    main.css<br>/images<br>    image-used-in-non-specific-place.jpg<br>    /heroes<br>        homepage-hero.v1.jpg<br>    /sprites<br>        sprite.png<br>/js<br>    main.js<br>    /vendor<br>        jquery-1.9.1.min.js</code></pre></section>
+			<!--				<section id="setup">-->
+			<!-- TODO: Add project setup section -->
+			<!-- create repo with grunt/bower install? -->
+			<!--				</section>-->
+			<section id="layout">
+				<h1>Layout</h1>
+				<p>Comrade generally uses a 12 column grid with media queries for responsive layout.</p>
+				<p>Most recently we've been using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> for a starting point for projects.</p>
+				<h2>Tips for working with a framework <span>(regardless of starting framework)</span></h2>
+				<ul>
+					<li>Familiarize yourself with framework components/features before beginning - most standard site features will be included with the framework.</li>
+					<li>Rely on framework for basic structure (columns/grid)</li>
+					<li>Bootstrap is highly customizable and has many built in features (as do most frameworks), don't waste time coding your own version of a feature if the frameowrk has done the work and heavily tested it already! In many cases the component can be customized to meet any needs.</li>
+					<li>Keep framework CSS and javascript separate in development environment in case an upgrade is needed - the files can be minified and concatenated before deployment.</li>
+				</ul>
+			</section>
+			<section id="mobile">
+				<h1>Mobile Optimization</h1><pre><code>&lt;meta name="viewport" content="width=device-width"&gt;</code></pre>
+				<ul>
+					<li>Media Queries (try to limit number of breakpoints)
+						<ul>
+							<li>With so many devices it is impossible and unadvisable to try and target any specifically. Breakpoints should fit the design not vice versa.</li>
+							<li>Limiting yourself to 2 or 3 breakpoints (at most) allows the designer and developer to focus more on the whole site and not think of it as separate per device.</li>
+						</ul>
+					</li>
+					<li>Images - <a href="https://css-tricks.com/snippets/javascript/lazy-loading-images/">lazy loading</a>, srcset, compression
+						<ul>
+							<li>With the advent of <a href="https://webkit.org/demos/srcset/">srcset</a> lazy-loading is less necessary, however depending on the content and length of the page it can still be a great asset on mobile or web.</li>
+							<li>Combining lazy loading with a CDN and srcset is a good way to minimize page load times on image intensive sites.</li>
+							<li>I (<a href="https://github.com/beesandtrees">@beesandtrees</a>) like <a href="http://luis-almeida.github.io/unveil/">unveil.js</a> when I just need to lazy load</li>
+							<li>There are lots of image compression tools online - here are a couple: <a href="https://compressor.io/compress">compressor</a>, <a href="https://kraken.io/web-interface">kraken</a></li>
+						</ul>
+					</li>
+					<li>Minification
+						<ul>
+							<li>Minification of CSS, Javascript and HTML helps with page load time, which is especially important to consider on mobile where users may be connecting over spotty shared wifi, or using slow cell connections</li>
+							<li>This also helps to imit server calls which is important for the same reason</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section id="coding">
+				<h1>Coding Style</h1>
+				<p>Indent using a tab representing 4 spaces for HTML, CSS and Javascript</p>
+				<p>When using an existing code base use the spoacing set by the previous coder for consistency</p>
+				<h2 id="html">HTML</h2><pre><code>&lt;!—  Add breaks for readability when necessary —&gt;
 &lt;p&gt;<br>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla<br>    ibero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed<br>    ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit<br>    a sollicitudin sagittis.
 &lt;/p&gt;
 &lt;ul&gt;<br>    &lt;li&gt;This is ok because even though it's pretty long, it's really too short to be on 2 lines.&lt;/li&gt;
 &lt;/ul&gt;
 					</code></pre>
-                    <ul>
-                        <li>Keep markup at a reasonable width and add breaks for readability when necessary.</li>
-                        <li>With short lines of content, the tag and content can stay on the same line.</li>
-                        <li>Always follow best practices for semantic and accessible markup. (see accessibility section for code examples)</li>
-                    </ul>
-                    <h2 id="css">CSS</h2>
-                    <ul>
-                        <li>Use OOCSS/SMACSS as your guiding CSS principles
-                            <ul>
-                                <li><a href="https://smacss.com/">SMACSS Site</a></li>
-                                <li><a href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/">Read about OOCSS on smashingmagazine.com</a></li>
-                                <li><a href="http://csswizardry.com/2014/03/naming-ui-components-in-oocss/">Read about OOCSS on CSSWizardry</a></li>
-                            </ul>
-                        </li>
-                        <li>Use class selectors as opposed to IDs</li>
-                        <li>Don't use !important unless you have a really good reason. If you feel like you need to use it, think very carefully about why that would be the case, then refactor your CSS to solve the problem.</li>
-                        <li>Never use &lt;br&gt;, &lt;b&gt;, &lt;strong&gt;, &lt;em&gt;, etc. just for styling.</li>
-                        <li>We use auto-prefixer to take care of vendor specificity when possible. If we are working on a site where we would not have access to something like auto-prefixer we will account for vendor prefixes as necessary.</li>
-                        <li>Use rems when possible</li>
-                        <li>Use percents for box level elements</li>
-                        <li>Don’t mix and match measurement units unless you have a good reason
-                            <br>(for example: don't use px AND pts at the same time)</li>
-                        <li>When joining an in progress project conform to the establised coding standards, i.e. indentations, units, etc.</li>
-                        <li>Formatting:
-                            <ul>
-                                <li>Each selector lives on its own line followed by the opening brace</li>
-                                <li>Each declaration lives on its own indented line</li>
-                                <li>Group the declarations in a logical way, whether this means alphabetically or by declaration type is not important as long as you are consistent.</li>
-                                <li>Each property has a space between the colon and value ends with a semi-colon</li>
-                                <li>The closing brace should be on its own line at the same indentation as the selector</li>
-                            </ul>
-                        </li>
-                    </ul><pre><code>h1 {<br>    font-size: 1.125em;<br>    position: relative;<br>    margin-bottom: 1em;<br>    padding-bottom: .375em;<br>}</code></pre>
-                    <h2 id="javascript">Javascript</h2>
-                    <ul>
-                        <li>Formatting:
-                            <ul>
-                                <li>Use tabs for spacing. A tab is expected to represent the width of 4 spaces.</li>
-                                <li>Place the brace on the same line as control statements and same line as function declarations.</li>
-                                <li>If more than one action is called upon a jQuery object indent those actions.</li>
-                            </ul>
-                        </li>
-                    </ul><pre><code>var myFunction = function () {
+				<ul>
+					<li>Keep markup at a reasonable width and add breaks for readability when necessary.</li>
+					<li>With short lines of content, the tag and content can stay on the same line.</li>
+					<li>Using your favorite text editor or IDE find a plugin  that will keep your formatting consistent. Many editors have plugins or settings that will prettify your code on save or with a keyboard shortcut. If this isn't an option check out the <a href="http://prettifier.net/html/">prettifier</a>.</li>
+					<li>Always follow best practices for semantic and accessible markup. (see accessibility section for code examples)</li>
+				</ul>
+				<h2 id="css">CSS</h2>
+				<ul>
+					<li>Comrade often uses LESS or SASS which is transpiled into CSS. This is determined by project and client needs and we are well versed in each.</li>
+					<li>Use OOCSS/SMACSS as your guiding CSS principles
+						<ul>
+							<li><a href="https://smacss.com/">SMACSS Site</a></li>
+							<li><a href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/">Read about OOCSS on smashingmagazine.com</a></li>
+							<li><a href="http://csswizardry.com/2014/03/naming-ui-components-in-oocss/">Read about OOCSS on CSSWizardry</a></li>
+						</ul>
+					</li>
+					<li>Use class selectors as opposed to IDs</li>
+					<li>Don't use !important unless you have a really good reason. If you feel like you need to use it, think very carefully about why that would be the case, then refactor your CSS to solve the problem. (But seriously, there are sometimes reasons to use it, just make sure you have a good reason.)</li>
+					<li><strong>Never use &lt;br&gt;, &lt;b&gt;, &lt;strong&gt;, &lt;em&gt;, etc. just for styling.</strong> (Notice that the previous statement is wrapped in a strong tag - that's because I feel strongly about this and it is important.)</li>
+					<li>We use auto-prefixer to take care of vendor specificity when possible. If we are working on a site where we would not have access to something like auto-prefixer we will account for vendor prefixes as necessary.</li>
+					<li>Use rems when possible when dealing with text (font sizes, line-height, margins, padding, etc.)</li>
+					<li>Use percents for box level elements</li>
+					<li>Don’t mix and match measurement units unless you have a good reason
+						<br>(for example: don't use px AND pts at the same time)</li>
+					<li>Don't use pts unless you are working on a PRINT style sheet. The web is rendered in pixels.</li>
+					<li>When joining an in progress project conform to the establised coding standards, i.e. indentations, units, etc.</li>
+					<li>Formatting:
+						<ul>
+							<li>Each selector lives on its own line followed by the opening brace</li>
+							<li>Each declaration lives on its own indented line</li>
+							<li>Group the declarations in a logical way, whether this means alphabetically or by declaration type is not important as long as you are consistent.</li>
+							<li>Each property has a space between the colon and value ends with a semi-colon</li>
+							<li>The closing brace should be on its own line at the same indentation as the selector</li>
+						</ul>
+					</li>
+				</ul><pre><code>h1 {<br>    font-size: 1.125em;<br>    position: relative;<br>    margin-bottom: 1em;<br>    padding-bottom: .375em;<br>}</code></pre>
+				<h2 id="javascript">Javascript</h2>
+				<ul>
+					<li>Formatting:
+						<ul>
+							<li>Use tabs for spacing. A tab is expected to represent the width of 4 spaces.</li>
+							<li>When joining an in progress project conform to the establised coding standards, i.e. indentations, units, etc. (i.e. if previously 2 spaces were used stick with this)</li>
+							<li>Place the brace on the same line as control statements and same line as function declarations.</li>
+							<li>If more than one action is called upon a jQuery object indent those actions.</li>
+						</ul>
+					</li>
+				</ul><pre><code>var myFunction = function () {
     var newText = 'Hi There!',<br>        newDiv = $('#greeting');
 
     $('.selector').text(newText)
    		  .addClass('lineup')
 		  .appendTo(newDiv);
 };</code></pre>
-                    <ul>
-                        <li>Keep javascript code in closures. This minimizes side effects and unintended interactions between different JavaScript plugins and snippets.</li>
-                        <li>Variable names, functions, classes and plugin names should all be in the lowerCamelCase format.</li>
-                        <li>Variable names must be meaningful (except when they aren’t).</li>
-                        <li>Include lots of comments please.</li>
-                        <li>If a jQuery element is going to be used more than once, set it to a JavaScript variable to prevent calling the DOM every time it needs to be used (this is known as object caching)</li>
-                        <li>For graceful degradation, always make sure that the DOM and initial CSS reflect the state you’d like the site in when JavaScript is not available. Even if content will initially be hidden, consider how the site should look without JavaScript available and hardcode your HTML and CSS to match that.</li>
-                        <li>Always use JSHint (JSLint is too bossy for us)</li>
-                        <li>console.log is built into Chrome, Safari, Opera, and Firebug. However, make sure there are no calls to console.log in any file when launched, as they will break in IE.</li>
-                    </ul>
-                </section>
-                <section id="browser">
-                    <h1>Browser Support</h1>
-                    <p>We use <a href="http://gs.statcounter.com/#desktop+console-browser_version_partially_combined-na-monthly-201506-201511">StatCounter</a> to evaluate browser usage and support.</p>
-                    <!-- TODO: Add browser stats via API / http://api.statcounter.com/ -->
-                    <ul>
-                        <li>Internet Explorer and graceful degradation</li>
-                    </ul>
-                    <h2>Desktop Support</h2>
-                    <table>
-                        <thead>
-                            <tr>
-								<th>Browser/Version</th>
-								<th>OSX 10.10</th>
-								<th>OSX 10.9</th>
-								<!-- 	TODO: Add Win 10	<th>Win10</th>	-->
-								<th>Win 8</th>
-								<th>Win 7</th>
-								<th>Win XP</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Chrome (stable)</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-							</tr>
-							<tr>
-								<td>Firefox (stable)</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-							</tr>
-							<tr>
-								<td>Safari</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-								<td>n/a</td>
-								<td>n/a</td>
-								<td>n/a</td>
-							</tr>
-							<tr>
-								<td>Internet Explorer 11.0</td>
-								<td>n/a</td>
-								<td>n/a</td>
-								<td class="supported">yes</td>
-								<td>n/a</td>
-								<td>n/a</td>
-							</tr>
-							<tr>
-								<td>Internet Explorer 10.0</td>
-								<td>n/a</td>
-								<td>n/a</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-								<td>n/a</td>
-							</tr>
-							<tr>
-								<td>Internet Explorer 9.0</td>
-								<td>n/a</td>
-								<td>n/a</td>
-								<td class="supported">yes</td>
-								<td class="supported">yes</td>
-								<td>n/a</td>
-							</tr>
-							<tr>
-								<td>Internet Explorer 8.0</td>
-								<td>n/a</td>
-								<td>n/a</td>
-								<td>n/a</td>
-								<td class="supported">partial*</td>
-								<td class="supported">partial*</td>
-							</tr>
-						</tbody>
-					</table>
-                    <h2>Mobile Support</h2>
-					<a href="https://developer.apple.com/support/app-store/">Apple iOS Usage</a> - <a href="http://developer.android.com/about/dashboards/index.html">Android Platform Version Usage</a>
-                    <table>
-                        <thead>
-                            <tr>
-								<th>Platform/OS</th>
-								<th>Browser</th>
-								<th>Target Devices</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>iOS 7 partial*</td>
-								<td>Latest Safari</td>
-								<td>iPhone4 &amp; 5, iPad 2+</td>
-							</tr>
-							<tr>
-								<td>iOS 8</td>
-								<td>Latest Safari</td>
-								<td>iPhone4S, 5, 6, &amp; 6 Plus, iPad 3+</td>
-							</tr>
-							<tr>
-								<td>iOS 9</td>
-								<td>Latest Safari</td>
-								<td>iPhone4S, 5, 6, &amp; 6 Plus, iPad 3+</td>
-							</tr>
-							<tr>
-								<td>Android 4.1</td>
-								<td>Browser</td>
-								<td>Current phones and tablets</td>
-							</tr>
-							<tr>
-								<td>Android 4.2–4.4</td>
-								<td>Chrome</td>
-								<td>Current phones and tablets</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- TODO: ADD QA SECTION -->
-                </section>
-                <section id="accessibility">
-                    <h1>Accessibility</h1>
-                    <p>This will link to Accessibility markup examples.</p>
-                    <h2>Forms</h2>
-                    <ul>
-                        <li>Form Element Markup</li>
-                        <li>Messaging</li>
-                    </ul>
-                    <h2>Tables</h2>
-                    <ul>
-                        <li>Caption</li>
-                        <li>Table Headers and Scope</li>
-                    </ul>
-                    <h2>Checklist and ARIA</h2>
-                    <p>Comrade has created an accessibility guideline document and cheat sheet to ensure sites we build are AA compliant.
-                        <br><a href="http://comrade.github.io/accessibility/cheatsheet.html">Comrade Accessibility Guidelines Cheat Sheet</a></p>
-                    <p>WAI-ARIA allows developers to easily describe the purpose, state and other functionality of visually rich user interfaces so that it can be understood by Assistive Technology.</p>
-                    <p>The rules regarding ARIA in HTML are too extensive to cover here, and in any case have been covered very well in many other places. Instead of simply reiterating or regurgitating available information we are supplying a list of some great resources.</p>
-                    <h3>ARIA Resources</h3>
-                    <ul>
-                        <li><a href="https://specs.webplatform.org/html-aria/webspecs/master/">ARIA in HTML</a></li>
-                        <li><a href="http://html5doctor.com/using-aria-in-html/">HTML5 Doctor: Using ARIA in HTML</a></li>
-                        <li><a href="http://www.w3.org/TR/html-aria/">ARIA in HTML Specs</a></li>
-                    </ul>
-                </section>
-                <section id="typography">
-                    <h1>Typography</h1>
-                    <ul>
-                        <li>Font Stacks - All fonts MUST have fallbacks to common and default fonts. No exceptions!</li>
-                    </ul><pre><code>h1 {<br>    font-family: roboto, arial, sans-serif;<br>}</code></pre>
-                    <h2>Web Fonts</h2>
-                    <p>We use typekit, google fonts or fonts.com for web font support.</p>
-                </section>
-                <section id="icons">
-                    <h1>Icons</h1>
-                    <ul>
-                        <li>All icons should be contained in a single sprite sheet.</li>
-                        <li>If using SVG icons there must be a fallback for non-supporting browsers.</li>
-                    </ul>
-                </section>
-                <section id="validation">
-                    <h1>Validation</h1>
-                    <ul>
-                        <li>All HTML, CSS and Javascript should be valid.</li>
-                        <li>Markup should be well-formed and contain all required attributes.</li>
-                        <li>HTML should validate with the <a href="http://validator.w3.org/">W3C Markup Validation Service</a>.</li>
-                        <li>Stylesheets should validate with the <a href="http://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a>.</li>
-                        <li>Javascript should validate with <a href="http://jshint.com/">JSHint</a>.</li>
-                    </ul>
-                </section>
-                <footer>
-                    <section class="last">
-                        <div class="icons">
-                            <a href="http://www.linkedin.com/company/112495?trk='company_search'">
-                                <svg viewBox="0 0 70 70" role="img" aria-label="linkedin logo">
-                                    <title>linkedin logo</title>
-                                    <path d="M49.2,61V38.7c0,0-0.101-5.9-5.8-5.9c-5.7,0-6.2,5.603-6.2,5.603V61H24.5l0.2-38h12.7L37.3,28.5c0,0,2.4-5.701,11.3-5.701
+				<ul>
+					<li>Keep javascript code in closures. This minimizes side effects and unintended interactions between different JavaScript plugins and snippets.</li>
+					<li>Variable names, functions, classes and plugin names should all be in the lowerCamelCase format.</li>
+					<li>Variable names must be meaningful (except when they aren’t).</li>
+					<li>Include lots of comments please.</li>
+					<li>If a jQuery element is going to be used more than once, set it to a JavaScript variable to prevent calling the DOM every time it needs to be used (this is known as object caching and it just means we don't need to search for that element over and over again)</li>
+					<li>For graceful degradation, always make sure that the DOM and initial CSS reflect the state you’d like the site in when JavaScript is not available. Even if content will initially be hidden, consider how the site should look without JavaScript available and hardcode your HTML and CSS to match that when possible.</li>
+					<li>Always use JSHint (JSLint is too bossy)</li>
+					<li>console.log is built into Chrome, Safari, Opera, and Firebug. However, make sure there are no calls to console.log in any file when launched, as they will break in older versions of IE.</li>
+				</ul>
+			</section>
+			<section id="browser">
+				<h1>Browser Support</h1>
+				<p>We use <a href="http://gs.statcounter.com/#desktop+console-browser_version_partially_combined-na-monthly-201506-201511">StatCounter</a> to evaluate browser usage and support. Our standard list of supported browsers is updated regularly to reflect changing usage.</p>
+				<!-- TODO: Add browser stats via API / http://api.statcounter.com/ -->
+				<ul>
+					<li>Internet Explorer, older browsers and graceful degradation
+						<ul>
+							<li>For older less <a href="https://en.wikipedia.org/wiki/Standards-compliant">Standards Compliant</a> browsers we support the concept of <a href="http://www.nickschaden.com/2012/06/27/css3-and-graceful-degradation/">graceful degradation</a>. This means that even though the site may not look exactly the same in IE8 as it does in the latest version of chrome we will make sure that it looks great in both.</li>
+							<li>Graceful degradation may mean that a background may be a solid color in IE8, but a gradient in Safari. It could mean the opacity is solid for an element in an older browser and translucent in a modern browser. Aesthetics are not sacrificed in the older browsers, they may just miss a few flourishes.</li>
+							<li>In many cases letting the browser determine the level of enhancement provides a smoother experience for someone using an older and slower computer/browser.</li>
+						</ul>
+					</li>
+				</ul>
+				<h2>Desktop Support</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Browser/Version</th>
+							<th>OSX 10.10</th>
+							<th>OSX 10.9</th>
+							<th>Win10</th>
+							<th>Win 8</th>
+							<th>Win 7</th>
+							<th>Win XP</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Chrome (stable)</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+						</tr>
+						<tr>
+							<td>Firefox (stable)</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+						</tr>
+						<tr>
+							<td>Safari</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td>n/a</td>
+						</tr>
+						<tr>
+							<td>Microsoft Edge</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td>n/a</td>
+							<td>n/a</td>
+						</tr>
+						<tr>
+							<td>Internet Explorer 11.0</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td>n/a</td>
+							<td>n/a</td>
+						</tr>
+						<tr>
+							<td>Internet Explorer 10.0</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td>n/a</td>
+						</tr>
+						<tr>
+							<td>Internet Explorer 9.0</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td class="supported">yes</td>
+							<td class="supported">yes</td>
+							<td>n/a</td>
+						</tr>
+						<tr>
+							<td>Internet Explorer 8.0</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td class="supported">partial*</td>
+							<td class="supported">partial*</td>
+						</tr>
+					</tbody>
+				</table>
+				<h2>Mobile Support</h2>
+				<a href="https://developer.apple.com/support/app-store/">Apple iOS Usage</a> - <a href="http://developer.android.com/about/dashboards/index.html">Android Platform Version Usage</a>
+				<table>
+					<thead>
+						<tr>
+							<th>Platform/OS</th>
+							<th>Browser</th>
+							<th>Target Devices</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>iOS 7 partial*</td>
+							<td>Latest Safari</td>
+							<td>iPhone4 &amp; 5, iPad 2+</td>
+						</tr>
+						<tr>
+							<td>iOS 8</td>
+							<td>Latest Safari</td>
+							<td>iPhone4S, 5, 6, &amp; 6 Plus, iPad 3+</td>
+						</tr>
+						<tr>
+							<td>iOS 9</td>
+							<td>Latest Safari</td>
+							<td>iPhone4S, 5, 6, &amp; 6 Plus, iPad 3+</td>
+						</tr>
+						<tr>
+							<td>Android 4.1</td>
+							<td>Browser</td>
+							<td>Current phones and tablets</td>
+						</tr>
+						<tr>
+							<td>Android 4.2–4.4</td>
+							<td>Chrome</td>
+							<td>Current phones and tablets</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- TODO: ADD QA SECTION -->
+			</section>
+			<section id="accessibility">
+				<h1>Accessibility</h1>
+				<p>This will link to Accessibility markup examples.</p>
+				<h2>Forms</h2>
+				<ul>
+					<li>Form Element Markup</li>
+					<li>Messaging</li>
+				</ul>
+				<h2>Tables</h2>
+				<ul>
+					<li>Caption</li>
+					<li>Table Headers and Scope</li>
+				</ul>
+				<h2>Checklist and ARIA</h2>
+				<p>Comrade has created an accessibility guideline document and cheat sheet to ensure sites we build are AA compliant.
+					<br><a href="http://comrade.github.io/accessibility/cheatsheet.html">Comrade Accessibility Guidelines Cheat Sheet</a></p>
+				<p>WAI-ARIA allows developers to easily describe the purpose, state and other functionality of visually rich user interfaces so that it can be understood by Assistive Technology.</p>
+				<p>The rules regarding ARIA in HTML are too extensive to cover here, and in any case have been covered very well in many other places. Instead of simply reiterating or regurgitating available information we are supplying a list of some great resources.</p>
+				<h3>ARIA Resources</h3>
+				<ul>
+					<li><a href="https://specs.webplatform.org/html-aria/webspecs/master/">ARIA in HTML</a></li>
+					<li><a href="http://html5doctor.com/using-aria-in-html/">HTML5 Doctor: Using ARIA in HTML</a></li>
+					<li><a href="http://www.w3.org/TR/html-aria/">ARIA in HTML Specs</a></li>
+				</ul>
+			</section>
+			<section id="typography">
+				<h1>Typography</h1>
+				<ul>
+					<li>Font Stacks - All fonts MUST have fallbacks to common and default fonts. No exceptions!</li>
+				</ul><pre><code>h1 {<br>    font-family: roboto, arial, sans-serif;<br>}</code></pre>
+				<h2>Web Fonts</h2>
+				<p>We use typekit, google fonts or fonts.com for web font support.</p>
+			</section>
+			<section id="icons">
+				<h1>Icons</h1>
+				<ul>
+					<li>All icons should be contained in a single sprite sheet.</li>
+					<li>If using SVG icons there must be a fallback for non-supporting browsers.</li>
+				</ul>
+			</section>
+			<section id="validation">
+				<h1>Validation</h1>
+				<ul>
+					<li>All HTML, CSS and Javascript should be valid.</li>
+					<li>Markup should be well-formed and contain all required attributes.</li>
+					<li>HTML should validate with the <a href="http://validator.w3.org/">W3C Markup Validation Service</a>.</li>
+					<li>Stylesheets should validate with the <a href="http://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a>.</li>
+					<li>Javascript should validate with <a href="http://jshint.com/">JSHint</a>.</li>
+				</ul>
+			</section>
+			<footer>
+				<section class="last">
+					<div class="icons">
+						<a href="http://www.linkedin.com/company/112495?trk='company_search'">
+							<svg viewBox="0 0 70 70" role="img" aria-label="linkedin logo">
+								<title>linkedin logo</title>
+								<path d="M49.2,61V38.7c0,0-0.101-5.9-5.8-5.9c-5.7,0-6.2,5.603-6.2,5.603V61H24.5l0.2-38h12.7L37.3,28.5c0,0,2.4-5.701,11.3-5.701
 					c8.9,0,14.603,5.4,14.603,14.9c0,9.6,0,23.301,0,23.301H49.2z M12.5,19.1c-4,0-7.3-2.9-7.3-6.4c0-3.6,3.3-6.4,7.3-6.4
 					s7.3,2.9,7.3,6.4C19.7,16.2,16.5,19.1,12.5,19.1z M19.2,61h-13V23h13V61z"></path>
-                                </svg>
-                            </a>
-                            <a href="https://twitter.com/comradeagency">
-                                <svg viewBox="0 0 70 70" role="img" aria-label="twitter logo">
-                                    <title>twitter logo</title>
-                                    <path d="M68.092,15.792c-2.401,1.06-4.985,1.773-7.692,2.099c2.765-1.648,4.886-4.262,5.885-7.371
+							</svg>
+						</a>
+						<a href="https://twitter.com/comradeagency">
+							<svg viewBox="0 0 70 70" role="img" aria-label="twitter logo">
+								<title>twitter logo</title>
+								<path d="M68.092,15.792c-2.401,1.06-4.985,1.773-7.692,2.099c2.765-1.648,4.886-4.262,5.885-7.371
 					c-2.59,1.526-5.454,2.637-8.504,3.233c-2.442-2.592-5.924-4.209-9.777-4.209c-7.393,0-13.386,5.965-13.386,13.328
 					c0,1.046,0.117,2.058,0.346,3.036C23.836,25.351,13.972,20.046,7.37,11.981c-1.152,1.969-1.811,4.259-1.811,6.701
 					c0,4.622,2.364,8.703,5.954,11.089c-2.194-0.068-4.258-0.668-6.064-1.666c0,0.055,0,0.114,0,0.167
@@ -354,20 +410,20 @@
 					c1.703,5.292,6.65,9.147,12.507,9.253C18.069,54.4,12.295,56.528,6.02,56.528c-1.079,0-2.146-0.062-3.195-0.182
 					c5.925,3.78,12.963,5.986,20.526,5.986c24.63,0,38.095-20.311,38.095-37.922c0-0.576-0.014-1.148-0.035-1.72
 					C64.024,20.812,66.295,18.467,68.092,15.792z"></path>
-                                </svg>
-                            </a>
-                            <a href="https://www.facebook.com/comradeagency">
-                                <svg viewBox="0 0 70 70" role="img" aria-label="facebook logo">
-                                    <title>facebook logo</title>
-                                    <path d="M28.3,62V35.2h-5.5v-9.4h5.6v-7.7c0,0,0.3-9.8,9.8-9.8s9.5,0,9.5,0v9.2H42.1c0,0-2.699,0-2.699,2.7c0,2.7,0,5.8,0,5.8H48
+							</svg>
+						</a>
+						<a href="https://www.facebook.com/comradeagency">
+							<svg viewBox="0 0 70 70" role="img" aria-label="facebook logo">
+								<title>facebook logo</title>
+								<path d="M28.3,62V35.2h-5.5v-9.4h5.6v-7.7c0,0,0.3-9.8,9.8-9.8s9.5,0,9.5,0v9.2H42.1c0,0-2.699,0-2.699,2.7c0,2.7,0,5.8,0,5.8H48
 						l-1.1,9.4H39.6V62H28.3z"></path>
-                                </svg>
-                            </a>
-                            <a href="http://comrade.github.io/">
-                                <svg viewBox="0 0 297.09 289.76" role="img" aria-label="github logo">
-                                    <title>github logo</title>
-                                    <g>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M148.55,0C66.52,0,0,66.5,0,148.55
+							</svg>
+						</a>
+						<a href="http://comrade.github.io/">
+							<svg viewBox="0 0 297.09 289.76" role="img" aria-label="github logo">
+								<title>github logo</title>
+								<g>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M148.55,0C66.52,0,0,66.5,0,148.55
 											c0,65.63,42.56,121.31,101.58,140.95c7.42,1.37,10.15-3.22,10.15-7.15c0-3.54-0.14-15.24-0.2-27.66
 											c-41.33,8.99-50.05-17.53-50.05-17.53c-6.76-17.17-16.49-21.74-16.49-21.74c-13.48-9.22,1.02-9.03,1.02-9.03
 											c14.92,1.05,22.77,15.31,22.77,15.31c13.25,22.71,34.75,16.14,43.23,12.35c1.33-9.6,5.18-16.16,9.43-19.86
@@ -375,29 +431,30 @@
 											c11.85-3.29,24.56-4.94,37.18-5c12.62,0.06,25.34,1.71,37.21,5c28.35-19.22,40.81-15.23,40.81-15.23c8.09,20.46,3,35.57,1.46,39.31
 											c9.52,10.4,15.29,23.65,15.29,39.87c0,57.06-34.75,69.62-67.83,73.29c5.33,4.61,10.08,13.65,10.08,27.51
 											c0,19.88-0.17,35.87-0.17,40.77c0,3.95,2.67,8.59,10.2,7.13c58.99-19.67,101.5-75.33,101.5-140.94C297.09,66.5,230.58,0,148.55,0z" />
-                                        <path d="M56.26,213.28c-0.33,0.74-1.49,0.96-2.55,0.45c-1.08-0.49-1.68-1.49-1.33-2.23
+									<path d="M56.26,213.28c-0.33,0.74-1.49,0.96-2.55,0.45c-1.08-0.49-1.68-1.49-1.33-2.23
 											c0.32-0.76,1.48-0.97,2.56-0.46C56.02,211.52,56.63,212.54,56.26,213.28L56.26,213.28z M54.43,211.92" />
-                                        <path d="M62.28,219.99c-0.71,0.66-2.09,0.35-3.03-0.69c-0.97-1.04-1.15-2.42-0.43-3.09
+									<path d="M62.28,219.99c-0.71,0.66-2.09,0.35-3.03-0.69c-0.97-1.04-1.15-2.42-0.43-3.09
 											c0.73-0.66,2.07-0.35,3.05,0.69C62.83,217.95,63.02,219.32,62.28,219.99L62.28,219.99z M60.86,218.47" />
-                                        <path d="M68.14,228.54c-0.91,0.63-2.4,0.04-3.32-1.28c-0.91-1.32-0.91-2.91,0.02-3.54
+									<path d="M68.14,228.54c-0.91,0.63-2.4,0.04-3.32-1.28c-0.91-1.32-0.91-2.91,0.02-3.54
 											c0.92-0.63,2.39-0.06,3.32,1.25C69.07,226.31,69.07,227.9,68.14,228.54L68.14,228.54z M68.14,228.54" />
-                                        <path d="M76.16,236.81c-0.81,0.9-2.55,0.66-3.82-0.57c-1.3-1.2-1.66-2.9-0.85-3.8c0.83-0.9,2.57-0.65,3.85,0.57
+									<path d="M76.16,236.81c-0.81,0.9-2.55,0.66-3.82-0.57c-1.3-1.2-1.66-2.9-0.85-3.8c0.83-0.9,2.57-0.65,3.85,0.57
 											C76.64,234.21,77.03,235.92,76.16,236.81L76.16,236.81z M76.16,236.81" />
-                                        <path d="M87.23,241.61c-0.36,1.16-2.03,1.69-3.71,1.2c-1.68-0.51-2.78-1.87-2.44-3.05
+									<path d="M87.23,241.61c-0.36,1.16-2.03,1.69-3.71,1.2c-1.68-0.51-2.78-1.87-2.44-3.05
 											c0.35-1.17,2.03-1.72,3.72-1.19C86.48,239.07,87.58,240.43,87.23,241.61L87.23,241.61z M87.23,241.61" />
-                                        <path d="M99.39,242.5c0.04,1.22-1.39,2.24-3.15,2.26c-1.78,0.04-3.21-0.95-3.23-2.16c0-1.24,1.4-2.24,3.17-2.27
+									<path d="M99.39,242.5c0.04,1.22-1.39,2.24-3.15,2.26c-1.78,0.04-3.21-0.95-3.23-2.16c0-1.24,1.4-2.24,3.17-2.27
 											C97.94,240.3,99.39,241.28,99.39,242.5L99.39,242.5z M99.39,242.5" />
-                                        <path d="M110.7,240.57c0.21,1.19-1.02,2.42-2.77,2.75c-1.72,0.32-3.32-0.42-3.54-1.61
+									<path d="M110.7,240.57c0.21,1.19-1.02,2.42-2.77,2.75c-1.72,0.32-3.32-0.42-3.54-1.61
 											c-0.21-1.23,1.04-2.45,2.76-2.77C108.9,238.64,110.48,239.36,110.7,240.57L110.7,240.57z M110.7,240.57" />
-                                    </g>
-                                </svg>
-                            </a>
-                        </div><small>&copy; 2015 Comrade</small></section>
-                </footer>
-            </div>
-        </main>
-        <script>
-            hljs.initHighlightingOnLoad();
-        </script>
-	</body>
+								</g>
+							</svg>
+						</a>
+					</div><small>&copy; 2015 Comrade</small></section>
+			</footer>
+		</div>
+	</main>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+</body>
+
 </html>

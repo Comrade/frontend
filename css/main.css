@@ -475,6 +475,11 @@ h2 {
     margin-top: 2em
 }
 
+h2 span {
+	text-transform: none;
+	font-size: 85%;
+}
+
 h3 {
     text-transform: none
 }
@@ -742,12 +747,15 @@ footer {
         content: "OSX 10.9"
     }
     td:nth-of-type(4):before {
-        content: "Win 8"
+        content: "Win 10"
     }
     td:nth-of-type(5):before {
-        content: "Win 7"
+        content: "Win 8"
     }
     td:nth-of-type(6):before {
+        content: "Win 7"
+    }
+    td:nth-of-type(7):before {
         content: "Win XP"
     }
 }
