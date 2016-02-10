@@ -11,6 +11,8 @@
  - [CSS](http://comrade.github.io/frontend/#css)
  - [Javascript](http://comrade.github.io/frontend/#javascript)
 - [Browser Support](http://comrade.github.io/frontend/#browser)
+ - [Desktop](http://comrade.github.io/frontend/#desktop)
+ - [Mobile](http://comrade.github.io/frontend/#mobile-support)
  - [QA](http://comrade.github.io/frontend/#qa)
 - [Accessibility](http://comrade.github.io/frontend/#accessibility)
  - [Forms](http://comrade.github.io/frontend/#accessibility)
