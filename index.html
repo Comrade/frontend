@@ -68,7 +68,7 @@
 				<pre><code>&lt;!doctype html&gt;</code></pre>
 				<p>Character Encoding</p>
 				<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
-				<p>Metadata content</p>
+				<p>Basic metadata content</p>
 				<ul>
 					<li>Page Titles</li>
 					<li>Meta Description</li>
@@ -90,13 +90,13 @@
 			<section id="layout">
 				<h1>Layout</h1>
 				<p>Comrade generally uses a 12 column grid with media queries for responsive layout.</p>
-				<p>Most recently we've been using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> for a starting point for projects.</p>
+				<p>Most recently we've been using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> as a starting point for projects.</p>
 				<h2>Tips for working with a framework <span>(regardless of starting framework)</span></h2>
 				<ul>
-					<li>Familiarize yourself with framework components/features before beginning - most standard site features will be included with the framework.</li>
+					<li>Familiarize yourself with framework components/features <strong>before</strong> beginning - most standard site features will be included with the framework.</li>
 					<li>Rely on framework for basic structure (columns/grid)</li>
-					<li>Bootstrap is highly customizable and has many built in features (as do most frameworks), don't waste time coding your own version of a feature if the frameowrk has done the work and heavily tested it already! In many cases the component can be customized to meet any needs.</li>
-					<li>Keep framework CSS and javascript separate in development environment in case an upgrade is needed - the files can be minified and concatenated before deployment.</li>
+					<li>Bootstrap is highly customizable and has many built in features (as do most frameworks.) Don't waste time coding your own version of a feature if the frameowrk has done the work and heavily tested it already! In many cases the component can be customized to meet any needs.</li>
+					<li>Keep framework CSS and javascript separate in your development environment in case an upgrade is needed - the files can be minified and concatenated before deployment.</li>
 				</ul>
 			</section>
 			<section id="mobile">
@@ -104,28 +104,29 @@
 				<hr id="media-queries">
 				<h2>Media Queries <span>(try to limit number of breakpoints)</span></h2>
 				<ul>
-					<li>With so many devices it is impossible and unadvisable to try and target any specifically. Breakpoints should fit the design not vice versa.</li>
-					<li>Limiting yourself to 2 or 3 breakpoints (at most) allows the designer and developer to focus more on the whole site and not think of it as separate per device.</li>
+					<li>With so many devices it is impossible and inadvisable to try and target any specifically. Breakpoints should fit the design not vice versa.</li>
+					<li>Limiting yourself to 2 or 3 breakpoints (at most) allows the designer and developer to focus more on the whole site instead of focusing on specific device views.</li>
+					<li>Targeting specific devices can lead to weird layouts in unexpected places.</li>
 				</ul>
 				<hr id="images">
 				<h2>Images <span><a href="https://css-tricks.com/snippets/javascript/lazy-loading-images/">lazy loading</a>, srcset, compression</span></h2>
 				<ul>
 					<li>With the advent of <a href="https://webkit.org/demos/srcset/">srcset</a> lazy-loading is less necessary, however depending on the content and length of the page it can still be a great asset on mobile or web.</li>
 					<li>Combining lazy loading with a CDN and srcset is a good way to minimize page load times on image intensive sites.</li>
-					<li>I (<a href="https://github.com/beesandtrees">@beesandtrees</a>) like <a href="http://luis-almeida.github.io/unveil/">unveil.js</a> when I just need to lazy load</li>
+					<li>We recommend <a href="http://luis-almeida.github.io/unveil/">unveil.js</a> when you just need to lazy load.</li>
 					<li>There are lots of image compression tools online - here are a couple: <a href="https://compressor.io/compress">compressor</a>, <a href="https://kraken.io/web-interface">kraken</a></li>
 				</ul>
 				<hr id="minification">
-				<h2>Minification</h2>
+				<h2>Minification and concatenation</h2>
 				<ul>
-					<li>Minification of CSS, Javascript and HTML helps with page load time, which is especially important to consider on mobile where users may be connecting over spotty shared wifi, or using slow cell connections</li>
-					<li>This also helps to imit server calls which is important for the same reason</li>
+					<li>Minification of CSS, Javascript and HTML helps with page load time, which is especially important to consider on mobile where users may be connecting over spotty shared wifi, or using slow cell connections.</li>
+					<li>Concatenation of files also helps to limit server calls which is important for the same reason.</li>
 				</ul>
 			</section>
 			<section id="coding">
 				<h1>Coding Style</h1>
 				<p>Indent using a tab representing 4 spaces for HTML, CSS and Javascript</p>
-				<p>When using an existing code base use the spoacing set by the previous coder for consistency</p>
+				<p>When using an existing code base use the spoacing set by the previous coder. Consistency is best!</p>
 				<hr id="html">
 				<h2>HTML</h2><pre><code>&lt;!—  Add breaks for readability when necessary —&gt;
 &lt;p&gt;<br>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla<br>    ibero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed<br>    ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit<br>    a sollicitudin sagittis.
@@ -136,8 +137,8 @@
 				<ul>
 					<li>Keep markup at a reasonable width and add breaks for readability when necessary.</li>
 					<li>With short lines of content, the tag and content can stay on the same line.</li>
-					<li>Using your favorite text editor or IDE find a plugin that will keep your formatting consistent. Many editors have plugins or settings that will prettify your code on save or with a keyboard shortcut. If this isn't an option check out the <a href="http://prettifier.net/html/">prettifier</a>.</li>
-					<li>Always follow best practices for semantic and accessible markup. (see accessibility section for code examples)</li>
+					<li>Using your favorite text editor or IDE find a plugin that will keep your formatting consistent. Many editors have plugins or settings that will prettify your code on save or with a keyboard shortcut. If this isn't an option check out <a href="http://prettifier.net/html/">prettifier</a>.</li>
+					<li>Always follow best practices for semantic and accessible markup. (See our <a href="http://comrade.github.io/accessibility/">accessibility guide</a> for examples.)</li>
 				</ul>
 				<hr id="css">
 				<h2>CSS</h2>
@@ -152,8 +153,8 @@
 					</li>
 					<li>Use class selectors as opposed to IDs</li>
 					<li>Don't use !important unless you have a really good reason. If you feel like you need to use it, think very carefully about why that would be the case, then refactor your CSS to solve the problem. (But seriously, there are sometimes reasons to use it, just make sure you have a good reason.)</li>
-					<li><strong>Never use &lt;br&gt;, &lt;strong&gt;, &lt;em&gt;, etc. just for styling.</strong> (Notice that the previous statement is wrapped in a strong tag - that's because I feel strongly about this and it is important.)</li>
-					<li>We use auto-prefixer to take care of vendor specificity when possible. If we are working on a site where we would not have access to something like auto-prefixer we will account for vendor prefixes as necessary.</li>
+					<li><strong>Don't use &lt;br&gt;, &lt;strong&gt;, &lt;em&gt;, etc. just for styling.</strong> (Notice that the previous statement is wrapped in a strong tag - that's because this is important.)</li>
+					<li>We use auto-prefixer to take care of vendor specificity when possible. If we are working on a project where we would not have access to something like auto-prefixer we will add vendor prefixes as necessary.</li>
 					<li>Use rems when possible when dealing with text (font sizes, line-height, margins, padding, etc.)</li>
 					<li>Use percents for box level elements</li>
 					<li>Don’t mix and match measurement units unless you have a good reason
@@ -178,7 +179,7 @@
 							<li>Use tabs for spacing. A tab is expected to represent the width of 4 spaces.</li>
 							<li>When joining an in progress project conform to the establised coding standards, i.e. indentations, units, etc. (i.e. if previously 2 spaces were used stick with this)</li>
 							<li>Place the brace on the same line as control statements and same line as function declarations.</li>
-							<li>If more than one action is called upon a jQuery object indent those actions.</li>
+							<li>If more than one action is called on a jQuery object indent those actions.</li>
 						</ul>
 					</li>
 				</ul><pre><code>var myFunction = function () {
@@ -194,7 +195,6 @@
 					<li>Variable names must be meaningful (except when they aren’t).</li>
 					<li>Include lots of comments please.</li>
 					<li>If a jQuery element is going to be used more than once, set it to a JavaScript variable to prevent calling the DOM every time it needs to be used (this is known as object caching and it just means we don't need to search for that element over and over again)</li>
-					<li>For graceful degradation, always make sure that the DOM and initial CSS reflect the state you’d like the site in when JavaScript is not available. Even if content will initially be hidden, consider how the site should look without JavaScript available and hardcode your HTML and CSS to match that when possible.</li>
 					<li>Always use JSHint (JSLint is too bossy)</li>
 					<li>console.log is built into Chrome, Safari, Opera, and Firebug. However, make sure there are no calls to console.log in any file when launched, as they will break in older versions of IE.</li>
 				</ul>
@@ -351,7 +351,7 @@
 				<p>Comrade has created an <a href="http://comrade.github.io/accessibility/">accessibility guideline document</a> and cheat sheet to ensure sites we build are AA compliant.</p>
 				<ul>
 					<li><a href="http://comrade.github.io/accessibility/cheatsheet.html">Comrade Accessibility Guidelines Cheat Sheet</a></li>
-					<li>We have also compiled a list of helpful links with <a href="http://comrade.github.io/accessibility/links.html">tips for building accessibile sites</a></li>
+					<li>We have also compiled a list of helpful links with <a href="http://comrade.github.io/accessibility/links.html">tips for building accessibile sites</a>.</li>
 				</ul>
 				<hr>
 				<p>WAI-ARIA allows developers to easily describe the purpose, state and other functionality of visually rich user interfaces so that it can be understood by Assistive Technology.</p>
