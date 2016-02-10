@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="css/comrade-highlight.css">
 	<script src="js/vendor/modernizr.js"></script>
 	<script src="js/vendor/highlight.pack.js"></script>
+	<script type="text/javascript" src="http://fast.fonts.net/jsapi/953d06ae-a1d9-4933-8b0b-f5bbb4d4aca1.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,9 @@
 				</li>
 				<li><a href="#browser">Browser Support</a>
 					<ul>
-						<li><a href="#browser">QA</a></li>
+						<li><a href="#desktop">Desktop</a></li>
+						<li><a href="#mobile-support">Mobile</a></li>
+						<li><a href="#qa">QA</a></li>
 					</ul>
 				</li>
 				<li><a href="#accessibility">Accessibility</a>
@@ -204,13 +207,13 @@
 				<ul>
 					<li>Internet Explorer, older browsers and graceful degradation
 						<ul>
-							<li>For older less <a href="https://en.wikipedia.org/wiki/Standards-compliant">Standards Compliant</a> browsers we support the concept of <a href="http://www.nickschaden.com/2012/06/27/css3-and-graceful-degradation/">graceful degradation</a>. This means that even though the site may not look exactly the same in IE8 as it does in the latest version of chrome we will make sure that it looks great in both.</li>
+							<li>For older less <a href="https://en.wikipedia.org/wiki/Standards-compliant">Standards Compliant</a> browsers we support the concept of <a href="https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement">graceful degradation</a>. This means that even though the site may not look exactly the same in IE8 as it does in the latest version of chrome we will make sure that it looks great in both.</li>
 							<li>Graceful degradation may mean that a background may be a solid color in IE8, but a gradient in Safari. It could mean the opacity is solid for an element in an older browser and translucent in a modern browser. Aesthetics are not sacrificed in the older browsers, they may just miss a few flourishes.</li>
 							<li>In many cases letting the browser determine the level of enhancement provides a smoother experience for someone using an older and slower computer/browser.</li>
 						</ul>
 					</li>
 				</ul>
-				<h2>Desktop Support</h2>
+				<h2 id="desktop">Desktop Support</h2>
 				<table>
 					<thead>
 						<tr>
@@ -298,7 +301,7 @@
 						</tr>
 					</tbody>
 				</table>
-				<h2>Mobile Support</h2>
+				<h2 id="mobile-support">Mobile Support</h2>
 				<a href="https://developer.apple.com/support/app-store/">Apple iOS Usage</a> - <a href="http://developer.android.com/about/dashboards/index.html">Android Platform Version Usage</a>
 				<table>
 					<thead>
@@ -336,11 +339,12 @@
 						</tr>
 					</tbody>
 				</table>
-				<!-- TODO: ADD QA SECTION -->
+				<h2 id="qa">QA</h2>
+				<p>Comrade will provide Quality Assurance testing in all supported browsers.</p>
 			</section>
 			<section id="accessibility">
 				<h1>Accessibility</h1>
-				<p>This will link to Accessibility markup examples.</p>
+				<p><a href="http://comrade.github.io/accessibility/markup-examples.html">Markup Examples</a></p>
 				<h2>Forms</h2>
 				<ul>
 					<li>Form Element Markup</li>
