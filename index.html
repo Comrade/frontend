@@ -28,15 +28,18 @@
 			<ul class="plain">
 				<li><a href="#starting">Boilerplate</a>
 					<ul>
-						<li><a href="#starting">Doctype</a></li>
-						<li><a href="#starting">Character Encoding</a></li>
-						<li><a href="#starting">Metadata</a></li>
+						<li><a href="#starting">Doctype &amp; Metadata</a></li>
 					</ul>
 				</li>
 				<li><a href="#directory">Directory Structure</a></li>
-				<!--                    <li><a href="#setup">Project Setup</a></li>-->
 				<li><a href="#layout">Layout</a></li>
-				<li><a href="#mobile">Mobile Optimization</a></li>
+				<li><a href="#mobile">Mobile Optimization</a>
+					<ul>
+						<li><a href="#media-queries">Media Queries</a></li>
+						<li><a href="#images">Images</a></li>
+						<li><a href="#minification">Minification</a></li>
+					</ul>
+				</li>
 				<li><a href="#coding">Coding Style</a>
 					<ul>
 						<li><a href="#html">HTML</a></li>
@@ -51,12 +54,7 @@
 						<li><a href="#qa">QA</a></li>
 					</ul>
 				</li>
-				<li><a href="#accessibility">Accessibility</a>
-					<ul>
-						<li><a href="#accessibility">Forms</a></li>
-						<li><a href="#accessibility">Tables</a></li>
-					</ul>
-				</li>
+				<li><a href="#accessibility">Accessibility</a></li>
 				<li><a href="#typography">Typography</a></li>
 				<li><a href="#icons">Icons</a></li>
 				<li><a href="#validation">Validation</a></li>
@@ -66,7 +64,7 @@
 			<section id="starting">
 				<h1>Starting Points</h1>
 				<p>We use <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a> to get started when we need a simple blank slate.</p>
-				<p>Doctype</p>
+				<h2>Doctype &amp; Metadata</h2>
 				<pre><code>&lt;!doctype html&gt;</code></pre>
 				<p>Character Encoding</p>
 				<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
@@ -103,34 +101,33 @@
 			</section>
 			<section id="mobile">
 				<h1>Mobile Optimization</h1><pre><code>&lt;meta name="viewport" content="width=device-width"&gt;</code></pre>
+				<hr id="media-queries">
+				<h2>Media Queries <span>(try to limit number of breakpoints)</span></h2>
 				<ul>
-					<li>Media Queries (try to limit number of breakpoints)
-						<ul>
-							<li>With so many devices it is impossible and unadvisable to try and target any specifically. Breakpoints should fit the design not vice versa.</li>
-							<li>Limiting yourself to 2 or 3 breakpoints (at most) allows the designer and developer to focus more on the whole site and not think of it as separate per device.</li>
-						</ul>
-					</li>
-					<li>Images - <a href="https://css-tricks.com/snippets/javascript/lazy-loading-images/">lazy loading</a>, srcset, compression
-						<ul>
-							<li>With the advent of <a href="https://webkit.org/demos/srcset/">srcset</a> lazy-loading is less necessary, however depending on the content and length of the page it can still be a great asset on mobile or web.</li>
-							<li>Combining lazy loading with a CDN and srcset is a good way to minimize page load times on image intensive sites.</li>
-							<li>I (<a href="https://github.com/beesandtrees">@beesandtrees</a>) like <a href="http://luis-almeida.github.io/unveil/">unveil.js</a> when I just need to lazy load</li>
-							<li>There are lots of image compression tools online - here are a couple: <a href="https://compressor.io/compress">compressor</a>, <a href="https://kraken.io/web-interface">kraken</a></li>
-						</ul>
-					</li>
-					<li>Minification
-						<ul>
-							<li>Minification of CSS, Javascript and HTML helps with page load time, which is especially important to consider on mobile where users may be connecting over spotty shared wifi, or using slow cell connections</li>
-							<li>This also helps to imit server calls which is important for the same reason</li>
-						</ul>
-					</li>
+					<li>With so many devices it is impossible and unadvisable to try and target any specifically. Breakpoints should fit the design not vice versa.</li>
+					<li>Limiting yourself to 2 or 3 breakpoints (at most) allows the designer and developer to focus more on the whole site and not think of it as separate per device.</li>
+				</ul>
+				<hr id="images">
+				<h2>Images <span><a href="https://css-tricks.com/snippets/javascript/lazy-loading-images/">lazy loading</a>, srcset, compression</span></h2>
+				<ul>
+					<li>With the advent of <a href="https://webkit.org/demos/srcset/">srcset</a> lazy-loading is less necessary, however depending on the content and length of the page it can still be a great asset on mobile or web.</li>
+					<li>Combining lazy loading with a CDN and srcset is a good way to minimize page load times on image intensive sites.</li>
+					<li>I (<a href="https://github.com/beesandtrees">@beesandtrees</a>) like <a href="http://luis-almeida.github.io/unveil/">unveil.js</a> when I just need to lazy load</li>
+					<li>There are lots of image compression tools online - here are a couple: <a href="https://compressor.io/compress">compressor</a>, <a href="https://kraken.io/web-interface">kraken</a></li>
+				</ul>
+				<hr id="minification">
+				<h2>Minification</h2>
+				<ul>
+					<li>Minification of CSS, Javascript and HTML helps with page load time, which is especially important to consider on mobile where users may be connecting over spotty shared wifi, or using slow cell connections</li>
+					<li>This also helps to imit server calls which is important for the same reason</li>
 				</ul>
 			</section>
 			<section id="coding">
 				<h1>Coding Style</h1>
 				<p>Indent using a tab representing 4 spaces for HTML, CSS and Javascript</p>
 				<p>When using an existing code base use the spoacing set by the previous coder for consistency</p>
-				<h2 id="html">HTML</h2><pre><code>&lt;!—  Add breaks for readability when necessary —&gt;
+				<hr id="html">
+				<h2>HTML</h2><pre><code>&lt;!—  Add breaks for readability when necessary —&gt;
 &lt;p&gt;<br>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla<br>    ibero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed<br>    ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit<br>    a sollicitudin sagittis.
 &lt;/p&gt;
 &lt;ul&gt;<br>    &lt;li&gt;This is ok because even though it's pretty long, it's really too short to be on 2 lines.&lt;/li&gt;
@@ -139,10 +136,11 @@
 				<ul>
 					<li>Keep markup at a reasonable width and add breaks for readability when necessary.</li>
 					<li>With short lines of content, the tag and content can stay on the same line.</li>
-					<li>Using your favorite text editor or IDE find a plugin  that will keep your formatting consistent. Many editors have plugins or settings that will prettify your code on save or with a keyboard shortcut. If this isn't an option check out the <a href="http://prettifier.net/html/">prettifier</a>.</li>
+					<li>Using your favorite text editor or IDE find a plugin that will keep your formatting consistent. Many editors have plugins or settings that will prettify your code on save or with a keyboard shortcut. If this isn't an option check out the <a href="http://prettifier.net/html/">prettifier</a>.</li>
 					<li>Always follow best practices for semantic and accessible markup. (see accessibility section for code examples)</li>
 				</ul>
-				<h2 id="css">CSS</h2>
+				<hr id="css">
+				<h2>CSS</h2>
 				<ul>
 					<li>Comrade often uses LESS or SASS which is transpiled into CSS. This is determined by project and client needs and we are well versed in each.</li>
 					<li>Use OOCSS/SMACSS as your guiding CSS principles
@@ -172,7 +170,8 @@
 						</ul>
 					</li>
 				</ul><pre><code>h1 {<br>    font-size: 1.125em;<br>    position: relative;<br>    margin-bottom: 1em;<br>    padding-bottom: .375em;<br>}</code></pre>
-				<h2 id="javascript">Javascript</h2>
+				<hr id="javascript">
+				<h2>Javascript</h2>
 				<ul>
 					<li>Formatting:
 						<ul>
@@ -344,18 +343,14 @@
 			</section>
 			<section id="accessibility">
 				<h1>Accessibility</h1>
-				<h2>Forms</h2>
-				<ul>
-					<li><a href="http://comrade.github.io/accessibility/markup-examples.html#forms">Form Element Markup</a></li>
-				</ul>
-				<h2>Tables</h2>
-				<ul>
-					<li>Caption</li>
-					<li>Table Headers and Scope</li>
-				</ul>
+
 				<h2>Checklist and ARIA</h2>
-				<p>Comrade has created an accessibility guideline document and cheat sheet to ensure sites we build are AA compliant.
-					<br><a href="http://comrade.github.io/accessibility/cheatsheet.html">Comrade Accessibility Guidelines Cheat Sheet</a></p>
+				<p>Comrade has created an <a href="http://comrade.github.io/accessibility/">accessibility guideline document</a> and cheat sheet to ensure sites we build are AA compliant.</p>
+				<ul>
+					<li><a href="http://comrade.github.io/accessibility/cheatsheet.html">Comrade Accessibility Guidelines Cheat Sheet</a></li>
+					<li>We have also compiled a list of helpful links with <a href="http://comrade.github.io/accessibility/links.html">tips for building accessibile sites</a></li>
+				</ul>
+				<hr>
 				<p>WAI-ARIA allows developers to easily describe the purpose, state and other functionality of visually rich user interfaces so that it can be understood by Assistive Technology.</p>
 				<p>The rules regarding ARIA in HTML are too extensive to cover here, and in any case have been covered very well in many other places. Instead of simply reiterating or regurgitating available information we are supplying a list of some great resources.</p>
 				<h3>ARIA Resources</h3>
